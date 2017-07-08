@@ -11,7 +11,7 @@ set(SOURCE_FILES
 )
 
 set(TEST_SOURCE_FILES
-    main.cpp
+    src/main.cpp
 )
 
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
