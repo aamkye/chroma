@@ -5,7 +5,7 @@
 Chroma::Painter::Painter(){};
 
 std::string Chroma::Painter::text(const std::string &text,
-                                  const std::vector<int> &vec = {}) {
+                                  const std::vector<int> &vec) {
   std::string output = beg;
   if (vec.size()) {
     for (const auto &var : vec) {

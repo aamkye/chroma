@@ -63,7 +63,7 @@ public:
   Painter &operator=(Painter &&) = delete;
   virtual ~Painter() = default;
 
-  std::string text(const std::string &text, const std::vector<int> &vec);
+  std::string text(const std::string &text, const std::vector<int> &vec = {});
   std::string beg = "\033[";
   std::string end = "m";
 };

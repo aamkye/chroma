@@ -10,6 +10,14 @@ set(SOURCE_FILES
     src/Chroma.cpp
 )
 
+set(TEST_SOURCE_FILES
+    main.cpp
+)
+
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(test${PROJECT_NAME} ${TEST_SOURCE_FILES})
 
 target_compile_options(${PROJECT_NAME} PUBLIC -std=c++1z -Wall -stdlib=libc++ -Wextra -O2)
+target_compile_options(test${PROJECT_NAME} PUBLIC -std=c++1z -Wall -stdlib=libc++ -Wextra -O2)
+
+target_link_libraries(test${PROJECT_NAME} ${PROJECT_NAME})
