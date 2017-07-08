@@ -1,4 +1,4 @@
-#include "src/Chroma.hpp"
+#include "Chroma.hpp"
 #include <iostream>
 
 int main() {
