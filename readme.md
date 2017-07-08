@@ -19,7 +19,7 @@ Chroma::Back (with definitions)
 
 ## Usage
 Usage is pretty simple (5 steps):
-1. Add header file to You soruce:
+- Add header file to You soruce:
 
 ```c++
 // If added locally:
@@ -29,20 +29,20 @@ Usage is pretty simple (5 steps):
 #include <Chroma.hpp>
 ```
 
-2. Create `Painter` object:
+- Create `Painter` object:
 
 ```c++
 Chroma::Painter whateverObj;
 ```
 
-3. Print something to wherever You want:
+- Print something to wherever You want:
 
 ```c++
   std::cout << whateverObj.text("Green Chroma", {Chroma::Fore::iGreen}) << std::endl;
   std::string = whateverObj.text("Storaged Green Chroma", {Chroma::Fore::iGreen});
 ```
 
-4. Link it:
+- Link it:
 
 ```bash
 #inline g++ linker
@@ -55,7 +55,7 @@ g++ main.cpp libChroma.a -o main -std=c++1z -lstdc++
 target_link_libraries(harmlessWhatever Chroma)
 ```
 
-5. Run it.
+- Run it.
 
 ## Details
 Whenever You wanted to color something, You've been messing up with those strange numbers like `\033[37m` or even more complicated `\033[1;41;32m` without knowing what type of color or style are You dealing with.. Here comes Chroma, once You create painter, You'll not want come back to bash style colours. 
