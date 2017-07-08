@@ -80,18 +80,18 @@ As You can see there is no order or limitation to arguments, but keep in mind th
 Type names are selfExplaining, IDs are those which makes the whole things fun, because You don't have to worry about them.
 
 Please mind that names in entities are fully working code if pased. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
-|`Type`     |`ID`|
-|-----------|----|
-|`normal`   |`0` |
-|`bold`     |`1` |
-|`dim`      |`2` |
-|`underline`|`4` |
-|`blink`    |`5` |
-|`reverse`  |`7` |
-|`hidden`   |`8` |
+| `Type`      | `ID` |
+|-------------|------|
+| `normal`    | `0`  |
+| `bold`      | `1`  |
+| `dim`       | `2`  |
+| `underline` | `4`  |
+| `blink`     | `5`  |
+| `reverse`   | `7`  |
+| `hidden`    | `8`  |
 
 **_Fore_** stands for foreground. Rest is the same as above, __BUT__ there are those strange iNames which stands for `intensive` versions of their siblings colors.
-|`Fore` | `ID`|
+| `Fore` | `ID` |
 | --- | --- |
 |`white` | `39`|
 |`black` | `30`|
