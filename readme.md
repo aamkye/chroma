@@ -81,37 +81,37 @@ Type names are selfExplaining, IDs are those which makes the whole things fun, b
 
 Please mind that names in entities are fully working code if pased. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
 
-| Type      | ID |
-| --------- | -- |
-| normal    | 0  |
-| bold      | 1  |
-| dim       | 2  |
-| underline | 4  |
-| blink     | 5  |
-| reverse   | 7  |
-| hidden    | 8  |
+|`Type` | `ID`|
+| --- | --- |
+|`normal` | `0` |
+|`bold` | `1` |
+|`dim` | `2` |
+|`underline` | `4` |
+|`blink` | `5` |
+|`reverse` | `7` |
+|`hidden` | `8` |
 
 **_Fore_** stands for foreground. Rest is the same as above, __BUT__ there are those strange iNames which stands for `intensive` versions of their siblings colors.
 
-| Fore  |  ID  |
+|`Fore` | `ID`|
 | --- | --- |
-| white  |  39 |
-| black  |  30 |
-| red  |  31 |
-| green  |  32 |
-| yellow  |  33 |
-| blue  |  34 |
-| magenta  |  35 |
-| cyan  |  36 |
-| gray  |  37 |
-| iGray  |  90 |
-| iRed  |  91 |
-| iGreen  |  92 |
-| iYellow  |  93 |
-| iBlue  |  94 |
-| iMagenta  |  95 |
-| iCyan  |  96 |
-| iWhite  |  97 |
+|`white` | `39`|
+|`black` | `30`|
+|`red` | `31`|
+|`green` | `32`|
+|`yellow` | `33`|
+|`blue` | `34`|
+|`magenta` | `35`|
+|`cyan` | `36`|
+|`gray` | `37`|
+|`iGray` | `90`|
+|`iRed` | `91`|
+|`iGreen` | `92`|
+|`iYellow` | `93`|
+|`iBlue` | `94`|
+|`iMagenta` | `95`|
+|`iCyan` | `96`|
+|`iWhite` | `97`|
 
 **_Back_** stands for background. Rest is totaly the same as above.
 
