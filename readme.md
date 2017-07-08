@@ -81,7 +81,7 @@ Type names are selfExplaining, IDs are those which makes the whole things fun, b
 
 Please mind that names in entities are fully working code if pased. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
 | `Type`      | `ID` |
-|-------------|------|
+| ----------- | ---- |
 | `normal`    | `0`  |
 | `bold`      | `1`  |
 | `dim`       | `2`  |
