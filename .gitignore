@@ -1,6 +1,7 @@
 cmake*/*
 *.json
-
+Chroma.cbp
+.idea/
 CMakeCache.txt
 Makefile
 *.a

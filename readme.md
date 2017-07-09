@@ -8,8 +8,8 @@ class:
 Chroma::Painter
 
 functions:
-text(std::string)
-text(std::string, std::vector<int> = {})
+template<typename T>
+std::string text(const T &text, const std::vector<int> &vec = {})
 
 types in namespaces (listed in "Even more details"):
 Chroma::Type (with definitions)
@@ -20,8 +20,8 @@ Chroma::Back (with definitions)
 *_Tested on: Ubuntu 14.04LTS and MacOSX 10.12.5_
 
 ## Usage
-Usage is pretty simple (5 steps):
-- Add header file to You soruce:
+Usage is pretty simple (4 steps):
+- Add header file to You source:
 
 ```c++
 // If added locally:
@@ -41,20 +41,7 @@ Chroma::Painter whateverObj;
 
 ```c++
   std::cout << whateverObj.text("Green Chroma", {Chroma::Fore::iGreen}) << std::endl;
-  std::string = whateverObj.text("Storaged Green Chroma", {Chroma::Fore::iGreen});
-```
-
-- Link it:
-
-```bash
-#inline g++ linker
-g++ main.cpp -o main -std=c++1z -lstdc++ -L. -lchroma
-
-#or inline g++ library
-g++ main.cpp libChroma.a -o main -std=c++1z -lstdc++
-
-#or CMakeLists.txt
-target_link_libraries(harmlessWhatever Chroma)
+  std::string = whateverObj.text(112, {Chroma::Fore::iRed});
 ```
 
 - Run it.
@@ -81,7 +68,7 @@ As You can see there is no order or limitation to arguments, but keep in mind th
 ## Even more details
 Type names are selfExplaining, IDs are those which makes the whole things fun, because You don't have to worry about them.
 
-Please mind that names in entities are fully working code if pased. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
+Please mind that names in entities are fully working code if passed. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
 
 |`Type` | `ID`|
 | --- | --- |
@@ -115,7 +102,7 @@ Please mind that names in entities are fully working code if pased. I mean You c
 |`iCyan` | `96`|
 |`iWhite` | `97`|
 
-**_Back_** stands for background. Rest is totaly the same as above.
+**_Back_** stands for background. Rest is totally the same as above.
 
 |`Back` | `ID`|
 | --- | --- |
@@ -137,4 +124,4 @@ Please mind that names in entities are fully working code if pased. I mean You c
 |`iCyan` | `106`|
 |`iWhite` | `107`|
 
-Aaand thats is. Have fun.
+Aaand that's it. Have fun.
