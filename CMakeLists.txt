@@ -15,7 +15,7 @@ set(TEST_SOURCE_FILES
 )
 
 set(COMPILE_OPTIONS
-    -std=c++1z -Wall -Wextra -O2
+    -std=c++0x -Wall -Wextra -O2
 )
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
