@@ -1,7 +1,8 @@
 #include "Chroma.hpp"
 #include <iostream>
 
-int main() {
+int main()
+{
   Chroma::Painter c;
   std::cout << c.text("Text", {Chroma::Fore::iGreen}) << std::endl;
   return 0;
