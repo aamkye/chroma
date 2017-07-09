@@ -1,5 +1,5 @@
 # libChroma.a
-Or just **_chroma_**, it's simple library for color purposes.
+Or just **_chroma_***, it's simple library for color purposes.
 
 ## Description
 
@@ -16,6 +16,8 @@ Chroma::Type (with definitions)
 Chroma::Fore (with definitions)
 Chroma::Back (with definitions)
 ```
+
+*_Tested on: Ubuntu 14.04LTS and MacOSX 10.12.5_
 
 ## Usage
 Usage is pretty simple (5 steps):
