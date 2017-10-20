@@ -1,23 +1,22 @@
-# libChroma.a
-Or just **_chroma_***, it's simple library for color purposes.
+**_Chroma_** it's simple library for color purposes.
 
 ## Description
 
 ```c++
 class:
-Chroma::Painter
+chroma::Underscore
 
 functions:
 template<typename T>
 std::string text(const T &text, const std::vector<int> &vec = {})
 
 types in namespaces (listed in "Even more details"):
-Chroma::Type (with definitions)
-Chroma::Fore (with definitions)
-Chroma::Back (with definitions)
+chroma::type (with definitions)
+chroma::foreground (with definitions)
+chroma::background (with definitions)
 ```
 
-*_Tested on: Ubuntu 14.04LTS and MacOSX 10.12.5_
+_Tested on: Ubuntu 14.04LTS and MacOSX 10.12.5_
 
 ## Usage
 Usage is pretty simple (4 steps):
@@ -31,34 +30,34 @@ Usage is pretty simple (4 steps):
 #include <Chroma.hpp>
 ```
 
-- Create `Painter` object:
+- Create `Underscore` object:
 
 ```c++
-Chroma::Painter whateverObj;
+chroma::Underscore _;
 ```
 
 - Print something to wherever You want:
 
 ```c++
-  std::cout << whateverObj.text("Green Chroma", {Chroma::Fore::iGreen}) << std::endl;
-  std::string = whateverObj.text(112, {Chroma::Fore::iRed});
+  std::cout << _("Green Chroma", {chroma::foreground::iGreen}) << std::endl;
+  std::string = _(112, {chroma::foreground::iRed});
 ```
 
 - Run it.
 
 ## Details
-Whenever You wanted to color something, You've been messing up with those strange numbers like `\033[37m` or even more complicated `\033[1;41;32m` without knowing what type of color or style are You dealing with.. Here comes Chroma, once You create painter, You'll not want come back to bash style colours. 
+Whenever You wanted to color something, You've been messing up with those strange numbers like `\033[37m` or even more complicated `\033[1;41;32m` without knowing what type of color or style are You dealing with.. Here comes Chroma, once You create painter, You'll not want come back to bash style colours.
 
 Dedicated vars are even more *human readable* than toaster manual. You want to bold red color text? Nothing simpler, just type it:
 
 ```c++
-  whateverObj.text("Toaster manual", {Chroma::Fore::red, Chroma::Type::bold});
+  _("Toaster manual", {chroma::foreground::red, chroma::type::bold});
 ```
 
 Want more? Add it by Yourself!
 
 ```c++
-  whateverObj.text("Toaster manual", {Chroma::Fore::red, Chroma::Type::bold, Chroma::Back::blue, Chroma::Type::reverse, Chroma::Type::underline});
+  _("Toaster manual", {chroma::foreground::red, chroma::type::bold, chroma::background::blue, chroma::type::reverse, chroma::type::underline});
 ```
 
 ### **--- --- --- IMPORTANT --- --- ---**
@@ -68,7 +67,7 @@ As You can see there is no order or limitation to arguments, but keep in mind th
 ## Even more details
 Type names are selfExplaining, IDs are those which makes the whole things fun, because You don't have to worry about them.
 
-Please mind that names in entities are fully working code if passed. I mean You can get `Chroma`, `Type` and `underline`, mix it to `Chroma::Type::underline` and use it in `text()` function.
+Please mind that names in entities are fully working code if passed. I mean You can get `chroma`, `type` and `underline`, mix it to `chroma::type::underline` and use it in `_("", {})` function.
 
 |`Type` | `ID`|
 | --- | --- |
@@ -80,9 +79,9 @@ Please mind that names in entities are fully working code if passed. I mean You 
 |`reverse` | `7` |
 |`hidden` | `8` |
 
-**_Fore_** stands for foreground. Rest is the same as above, __BUT__ there are those strange iNames which stands for `intensive` versions of their siblings colors.
+**_Foreground_**. Rest is the same as above, __BUT__ there are those strange iNames which stands for `intensive` versions of their siblings colors.
 
-|`Fore` | `ID`|
+|`Foreground` | `ID`|
 | --- | --- |
 |`white` | `39`|
 |`black` | `30`|
@@ -102,9 +101,9 @@ Please mind that names in entities are fully working code if passed. I mean You 
 |`iCyan` | `96`|
 |`iWhite` | `97`|
 
-**_Back_** stands for background. Rest is totally the same as above.
+**_Background_**. Rest is totally the same as above.
 
-|`Back` | `ID`|
+|`Background` | `ID`|
 | --- | --- |
 |`white` | `49`|
 |`black` | `40`|

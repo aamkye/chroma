@@ -3,10 +3,13 @@
 
 int main()
 {
-  Chroma::Painter c;
+  chroma::Underscore _;
   uint32_t num = 107;
 
-  std::cout << c.text("Text", {Chroma::Fore::iGreen}) << std::endl;
-  std::cout << c.text(num + 5, {Chroma::Fore::iRed}) << std::endl;
+  std::vector<int> a = {chroma::foreground::red, chroma::background::yellow};
+
+  std::cout << _("Text1", {chroma::foreground::iGreen}) << std::endl;
+  std::cout << _("Text2", a) << std::endl;
+  std::cout << _(num + 5, {chroma::foreground::iRed, chroma::type::underline}) << std::endl;
   return 0;
 }

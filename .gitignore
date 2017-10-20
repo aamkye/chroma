@@ -7,3 +7,5 @@ Makefile
 *.a
 cmake_install.cmake
 bin/
+.DS_Store
+build/
