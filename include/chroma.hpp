@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 
+#pragma once
 namespace chroma {
   namespace type {
     static const int normal = 0;
