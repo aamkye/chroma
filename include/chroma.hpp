@@ -54,25 +54,25 @@ namespace chroma {
     static const int iWhite = 107;
   };
 
-  class Underscore {
+  class Operator {
   public:
-    Underscore() = default;
-    Underscore(const Underscore &) = delete;
-    Underscore(Underscore &&) = delete;
-    Underscore &operator=(const Underscore &) = delete;
-    Underscore &operator=(Underscore &&) = delete;
-    virtual ~Underscore() = default;
+    Operator() = default;
+    Operator(const Operator &) = delete;
+    Operator(Operator &&) = delete;
+    Operator &operator=(const Operator &) = delete;
+    Operator &operator=(Operator &&) = delete;
+    virtual ~Operator() = default;
 
     template<typename T>
-    std::string operator()(const T &text, const std::vector<int> &vec = {}) {
-      std::string output = beg;
+    std::string operator()(const T &text, const std::vector<int> &vec = {}, bool raw = false) {
+      std::string output = this->beg(raw);
       if (vec.size()) {
         for (const auto &var : vec) {
           output += std::to_string(var) + ";";
         }
         output.pop_back();
       }
-      output += end + stringify(text) + beg + "0" + end;
+      output += end + stringify(text) + this->beg(raw) + "0" + end;
       return output;
     }
 
@@ -88,7 +88,12 @@ namespace chroma {
       return std::string(t);
     }
 
-    std::string beg = "\033[";
+    std::string beg(bool raw = false) {
+      return (raw ? this->rawBeg : this->formatBeg);
+    }
+
+    std::string rawBeg = "\\033[";
+    std::string formatBeg = "\033[";
     std::string end = "m";
   };
 };

@@ -6,8 +6,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 project(Chroma)
 
+INCLUDE_DIRECTORIES(
+    include
+)
+
 set(TEST_SOURCE_FILES
-    src/main.cpp
+    test/main.cpp
 )
 
 set(COMPILE_OPTIONS
